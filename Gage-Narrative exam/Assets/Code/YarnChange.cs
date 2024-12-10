@@ -10,3 +10,10 @@ public class YarnChange : MonoBehaviour
         GameObject targetObject = GameObject.Find(objectName);
         if (targetObject != null) targetObject.transform.GetChild(0).gameObject.SetActive(true);
     }
+    
+    [YarnCommand("off")]
+    public void TurnOffGameObject(string objectName)
+    {
+        GameObject targetObject = GameObject.Find(objectName);
+        if (targetObject != null) targetObject.transform.GetChild(0).gameObject.SetActive(false);
+    }
